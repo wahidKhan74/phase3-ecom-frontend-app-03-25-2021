@@ -1,18 +1,18 @@
 <!-- User Registration form  -->
-<form action="/login" method="post" class="main-form mt-10 needs-validation" novalidate>
+<form  class="main-form mt-10 needs-validation" novalidate>
     <fieldset>
         <legend>Add Product Form  </legend>
         <div class="form-row">
             <div class="form-group col-md">
                 <label for="name">Product Name :</label>
-                <input type="text" class="form-control" id="name" aria-describedby="nameHelp" placeholder="Enter User name" required>
+                <input type="text" class="form-control" id="name" [(ngModel)]="product.name" name="name" aria-describedby="nameHelp" placeholder="Enter Product name" required>
                 <small id="nameHelp" class="form-text text-muted">This should be product name</small>
             </div>
         </div>
         <div class="form-row">
             <div class="form-group col-md">
                 <label for="price">Product Price :</label>
-                <input type="text" class="form-control" id="price" aria-describedby="priceHelp" placeholder="Enter User name" required>
+                <input type="text" class="form-control" id="price" [(ngModel)]="product.price" name="price" aria-describedby="priceHelp" placeholder="Enter Product Price" required>
                 <small id="priceHelp" class="form-text text-muted">This should be product price</small>
             </div>
         </div>
@@ -20,10 +20,10 @@
         <div class="form-row">
             <div class="form-group col-md">
                 <label for="description">Product description :</label>
-                <input type="text" class="form-control" id="description" aria-describedby="descriptionHelp" placeholder="Enter User name" required>
+                <input type="text" class="form-control" id="description" [(ngModel)]="product.description" name="description" aria-describedby="descriptionHelp" placeholder="Enter product Description" required>
                 <small id="descriptionHelp" class="form-text text-muted">This should be product description</small>
             </div>
         </div>
-        <button type="submit" class="btn btn-primary btn-block">Add Product</button>
+        <button type="submit" class="btn btn-primary btn-block" (click)="addProduct()">Add Product</button>
 </fieldset>
 </form>

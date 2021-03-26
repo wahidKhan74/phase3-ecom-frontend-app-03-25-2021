@@ -3,10 +3,10 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
-import { ProdutsComponent } from './produts/produts.component';
 import { UsersComponent } from './users/users.component';
 import { AddProductComponent } from './add-product/add-product.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { ProductsComponent } from './products/products.component';
 
 
 const routes: Routes = [
@@ -14,7 +14,7 @@ const routes: Routes = [
   { path:'home', component: HomeComponent},
   { path:'login', component: LoginComponent},
   { path:'register', component: RegisterComponent},
-  { path:'products', component: ProdutsComponent},
+  { path:'products', component: ProductsComponent},
   { path:'users', component: UsersComponent},
   { path:'add-product', component: AddProductComponent},
   { path:'sign-in',redirectTo:'login'},

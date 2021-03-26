@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../api.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-product',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddProductComponent implements OnInit {
 
-  constructor() { }
+  public product = {name:'',price:'',description:''};
+  constructor(private apiService: ApiService,private router: Router ) { }
 
   ngOnInit(): void {
   }
 
+  public addProduct(){
+    this.apiService.sendPostProduct(this.product).subscribe(data=>{
+      // console.log("Success ",data);
+      this.router.navigate(['/products']);
+    },err=>{
+      console.log("Error:",err);
+      
+    })
+  }
 }

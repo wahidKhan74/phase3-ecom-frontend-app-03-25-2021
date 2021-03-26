@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { ProdutsComponent } from './produts/produts.component';
+
 import { UsersComponent } from './users/users.component';
 import { InvoiceComponent } from './invoice/invoice.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -16,13 +16,15 @@ import { AddProductComponent } from './add-product/add-product.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { ApiService } from './api.service';
+import { ProductsComponent } from './products/products.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    ProdutsComponent,
     UsersComponent,
     InvoiceComponent,
     NavbarComponent,
@@ -31,14 +33,16 @@ import { NotFoundComponent } from './not-found/not-found.component';
     AddProductComponent,
     LoginComponent,
     RegisterComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    ProductsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
