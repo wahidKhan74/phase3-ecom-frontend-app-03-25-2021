@@ -1,0 +1,13 @@
+<h3>Two Way data binding</h3>
+Enter Your text : <input type="text" [value]="userText" name="name" (input)="sendData($event)"> <br>
+
+<h3>{{userText}}</h3>
+
+<button (click)="clearData()" class="btn btn-primary" >Click Me</button>
+
+<br><br>
+<h3>Two Way data binding by using ngModel Directive</h3> 
+
+<input type="text" [(ngModel)]="address" name="address">
+
+<h2>{{address}}</h2>

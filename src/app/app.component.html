@@ -1,42 +1,7 @@
 <app-header></app-header>
 <app-navbar></app-navbar>
-<h1>Hello, To {{title}} </h1>
+<!-- <app-twoway-databinding></app-twoway-databinding> -->
 
-<h3>Data Binding from source to view by inerpolation :-</h3>
-<p>Pirce : {{price}}</p>
-<p>Married : {{isMarried}}</p>
-
-<p>Family : {{family}}</p>
-<p>User : {{user | json }}</p>
-
-<p>User Info : {{showUserInfo()}} </p>
-
-<h3>Data Binding from source to view by Property Binding :-</h3>
-
-
-<p>Pirce : <span [innerHTML]="price"></span></p>
-<p>Married : <span [innerText]="isMarried"></span></p>
-<img [src]="imgPath" alt="" srcset="">
-
-<h3>Style Binding from source to view </h3>
-
-<p [style.color]="'green'">Fullstack Leaning Web Front end</p>
-<p [style.color]="color.third" [style.text-align]="'center'" [style.font-size.px]="'24'">Front-end Developement</p>
-<p [style.color]="isError ? 'red' : 'green'" [style.text-align]="'center'" [style.font-size.px]="'24'"> I am just a validation </p>
-
-
-<h3>Class Binding from source to view </h3>
-
-<p [className]="'green-text'"> Today is good day !</p>
-<p [className]="'green-text yellow-bg p-all'"> Today is good day !</p>
-
-<p [className]="isError ? 'red-text' : 'green-text'"> This is a Error text</p>
-
-<p [className]="hasError('no') ? 'green-text': 'red-text'">I am validation text !</p>
-
-
-<h3>Event Binding :</h3>
-
-<button class="btn btn-primary" (click)="changeStatus()">Change Marital status</button>
-
+<!-- dynamic expose your route  -->
+<router-outlet></router-outlet>
 <app-footer></app-footer>
