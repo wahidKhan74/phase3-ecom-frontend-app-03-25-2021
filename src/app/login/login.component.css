@@ -1,0 +1,12 @@
+.main-form{
+    width: 50%;
+    margin: auto;
+}
+.mt-10{
+    margin-top: 2%;
+}
+
+fieldset{
+    border: 2px solid black;
+    padding: 20px;
+}
