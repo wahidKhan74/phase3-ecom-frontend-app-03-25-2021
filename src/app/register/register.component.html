@@ -1,1 +1,56 @@
-<p>register works!</p>
+<!-- User Registration form  -->
+<form action="/registration" method="post" class="main-form mt-10 needs-validation" novalidate>
+    <fieldset>
+        <legend>Registration Form  </legend>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="username">Username :</label>
+                <input type="text" class="form-control" id="username" aria-describedby="usernameHelp" placeholder="Enter User name" required>
+                <small id="usernameHelp" class="form-text text-muted">This should be Your username</small>
+                <div class="valid-feedback">
+                    Username is Perfect !
+                </div>
+                <div class="invalid-feedback">
+                    Please Enter a correct userame !
+                </div>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="email">Email :</label>
+                <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter User name" required>
+                <small id="emailHelp" class="form-text text-muted">This should be Your email</small>
+                <div class="invalid-feedback">
+                    Please Enter a correct email !
+                </div>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="password">Password :</label>
+                <input type="password" class="form-control" id="password" aria-describedby="passwordHelp" placeholder="Enter User name" required>
+                <small id="passwordHelp" class="form-text text-muted">This should be Your password</small>
+                <div class="invalid-feedback">
+                    Please Enter a correct password !
+                </div>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="cnfPasssword">Confirm Password :</label>
+                <input type="password" class="form-control" id="cnfPasssword" aria-describedby="cnfPassswordHelp" placeholder="Enter User name" required>
+                <small id="cnfPassswordHelp" class="form-text text-muted">This should be Your cnfPasssword</small>
+                <div class="invalid-feedback">
+                    Please Enter a correct password !
+                </div>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md">
+                <label for="roles">Roles :</label>
+                <select class="form-control" id="roles">
+                <option value="admin">Admin</option>
+                <option value="user">User</option>
+                <option value="vendor">Vendor</option>
+                </select>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Sign Up</button>
+</fieldset>
+</form>
